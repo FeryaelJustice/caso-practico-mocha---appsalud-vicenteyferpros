@@ -1,0 +1,27 @@
+{
+  "name": "caso-practico-mocha---appsalud-vicenteyferpros",
+  "version": "1.0.0",
+  "description": "Ejercicio AppSalud",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://FeryaelJustice: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@github.com/cifpfbmoll/caso-practico-mocha---appsalud-vicenteyferpros.git"
+  },
+  "author": "Vicente, Fernando",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cifpfbmoll/caso-practico-mocha---appsalud-vicenteyferpros/issues"
+  },
+  "homepage": "https://github.com/cifpfbmoll/caso-practico-mocha---appsalud-vicenteyferpros#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3"
+  }
+}
