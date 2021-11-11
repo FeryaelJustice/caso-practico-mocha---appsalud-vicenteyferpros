@@ -10,6 +10,7 @@ class Bascula {
     calcularIMC() {
         let peso = this.pesos[this.pesos.length - 1]
         let altura = this.alturas[this.alturas.length - 1]
+        console.log(peso, altura)
         return peso / (altura * altura);
     }
 

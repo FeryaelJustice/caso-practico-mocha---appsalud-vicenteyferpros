@@ -1,9 +1,6 @@
 const Paciente = require('./paciente');
 const Bascula = require('./bascula');
 
-const paciente = new Paciente()
+const bascula = new Bascula([1,2],[1.1,1.3],new Date(),2)
 
-const paciente1 = new Paciente("Pepe","ssd","ss","dsd")
-
-console.log(paciente)
-console.log(paciente1)
+console.log(bascula.calcularIMC())
