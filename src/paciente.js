@@ -9,7 +9,7 @@ class Paciente {
     }
 
     saludar() {
-        console.log(`Hola, soy ${this.nombre} ${this.apellidos}`);
+        return `Hola, soy ${this.nombre} ${this.apellidos}`;
     }
 
     obtenerNombre() {
