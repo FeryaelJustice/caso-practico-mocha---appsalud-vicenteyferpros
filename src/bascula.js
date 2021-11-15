@@ -8,7 +8,7 @@ class Bascula {
     }
 
     obtenerNumeroAnotaciones() {
-        return this.anotaciones.length;
+        return this.anotaciones;
     }
 
     anotarPesoAltura(peso, altura, fecha) {
