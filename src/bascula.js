@@ -7,6 +7,48 @@ class Bascula {
         this.anotaciones = anotaciones;
     }
 
+    obtenerNumeroAnotaciones() {
+        return this.anotaciones.length;
+    }
+
+    anotarPesoAltura(peso, altura, fecha) {
+        if (peso == undefined && peso == null) {
+            return "peso not defined";
+        }
+        this.pesos.push(peso);
+        if (altura !== undefined && altura != null) {
+            this.alturas.push(altura);
+        } else {
+            this.alturas.push(1);
+        }
+        if (fecha !== undefined && fecha != null) {
+            this.fechas.push(fecha);
+        } else {
+            this.fechas.push(new Date());
+        }
+        this.anotaciones += 1;
+    }
+
+    obtenerPesoMaximo() {
+        let pesoMaximo = this.pesos[0];
+        for (let i = 0; i < this.pesos.length; i++) {
+            if (this.pesos[i] > pesoMaximo) {
+                pesoMaximo = this.pesos[i];
+            }
+        }
+        return pesoMaximo;
+    }
+
+    obtenerPesoMinimo() {
+        let pesoMinimo = this.pesos[0];
+        for (let i = 0; i < this.pesos.length; i++) {
+            if (this.pesos[i] < pesoMinimo) {
+                pesoMinimo = this.pesos[i];
+            }
+        }
+        return pesoMinimo;
+    }
+
     calcularIMC() {
         let peso = this.pesos[this.pesos.length - 1]
         let altura = this.alturas[this.alturas.length - 1]
