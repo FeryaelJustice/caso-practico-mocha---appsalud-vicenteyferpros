@@ -17,7 +17,11 @@ class Paciente {
     }
 
     modificarNombre(nombre) {
-        this.nombre = nombre;
+        if (typeof nombre === "string") {
+            this.nombre = nombre;
+        }else{
+            return "Error"
+        }
     }
 
     obtenerApellidos() {
@@ -47,7 +51,7 @@ class Paciente {
         return edad;
     }
 
-    modificarBascula(bascula){
+    modificarBascula(bascula) {
         this.registroBascula = bascula;
     }
 
