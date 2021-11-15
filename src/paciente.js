@@ -52,7 +52,7 @@ class Paciente {
         let fechaActual = new Date();
         let edad = fechaActual.getFullYear() - this.fechaNacimiento.getFullYear();
         if (fechaActual.getMonth() >= this.fechaNacimiento.getMonth()) {
-            edad--;
+            edad++;
         }
         return edad;
     }
