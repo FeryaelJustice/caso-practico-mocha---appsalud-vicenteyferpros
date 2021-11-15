@@ -19,7 +19,7 @@ class Paciente {
     modificarNombre(nombre) {
         if (typeof nombre === "string") {
             this.nombre = nombre;
-        }else{
+        } else {
             return "Error"
         }
     }
@@ -29,7 +29,11 @@ class Paciente {
     }
 
     modificarApellidos(apellidos) {
-        this.apellidos = apellidos;
+        if (typeof apellidos === "string") {
+            this.apellidos = apellidos;
+        } else {
+            return "Error"
+        }
     }
 
     obtenerFechaNacimiento() {
@@ -37,7 +41,11 @@ class Paciente {
     }
 
     modificarFechaNacimento(fecha) {
-        this.fechaNacimiento = fecha;
+        if (typeof fecha === "date") {
+            this.fecha = fecha;
+        } else {
+            return "Error"
+        }
     }
 
     obtenerEdad() {
@@ -52,7 +60,11 @@ class Paciente {
     }
 
     modificarBascula(bascula) {
-        this.registroBascula = bascula;
+        if (typeof bascula === "object") {
+            this.bascula = bascula;
+        } else {
+            return "Error"
+        }
     }
 
     obtenerBascula() {
