@@ -71,16 +71,22 @@ describe('paciente Test', function()
 
     //modificarBascula()
     it ('modificarBascula()', function(){
-
+        let pacienteBascula = new Paciente("Pepe","Fernandez",new Date());
+        let expected = "Error";
+        assert.equal(pacienteBascula.modificarBascula(0), expected, "mensaje");
     });
 
     //obtenerBascula()
     it ('obtenerBascula()', function(){
-
+        let pacienteBascula = new Paciente("Pepe","Fernandez",new Date());      
+        assert.typeOf(pacienteBascula.obtenerBascula(), "Object");
     });
 
     //calcularIMC()
     it ('calcularIMC()', function(){
-
+        let pacienteIMC = new Paciente("Juan", "Alberto", new Date());
+        pacienteIMC.registroBascula.pesos.push(20);
+        pacienteIMC.registroBascula.alturas.push(170);
+        assert.equal(pacienteIMC.calcularIMC(), 0.0006920415224913495, "message");
     });
 });
