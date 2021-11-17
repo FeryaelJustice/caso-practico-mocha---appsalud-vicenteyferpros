@@ -6,7 +6,7 @@ class Termometro {
     };
 
     obtenerNumeroAnotaciones(){
-
+        return this.anotaciones;
     };
 
     anotarTemperatura(){
@@ -34,6 +34,6 @@ class Termometro {
     };
 
     static convertirFahrenheitACelsius(){
-        
+
     }
 }
