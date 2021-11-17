@@ -1,4 +1,5 @@
 class Termometro {
+
     constructor(temperaturas, fechas, anotaciones){
         this.temperaturas = temperaturas;
         this.fechas = fechas;
@@ -9,7 +10,7 @@ class Termometro {
         return this.anotaciones;
     };
 
-    anotarTemperatura(){
+    anotarTemperatura(temperaturas, fechas){
 
     };
 
@@ -37,3 +38,5 @@ class Termometro {
 
     }
 }
+
+module.exports = Termometro
