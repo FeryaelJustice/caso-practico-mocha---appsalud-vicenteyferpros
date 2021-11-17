@@ -11,8 +11,9 @@ describe('termometro Test', function () {
     });
     //obtenerNumeroAnotaciones
     it('check obtenerNumeroAnotaciones', function () {
-        let termometroObtenerNumeroAnotaciones = new Termometro();
-        assert.equal(termometroObtenerNumeroAnotaciones, "");
+        let fecha = new Date(1970, 10, 20, 20, 30, 10, 0)
+        let termometroObtenerNumeroAnotaciones = new Termometro([3, 4], [fecha, fecha], 2);
+        assert.equal(termometroObtenerNumeroAnotaciones.obtenerNumeroAnotaciones(), 2);
     });
     //anotarTemperatura
     it('check anotarTemperatura', function () {
