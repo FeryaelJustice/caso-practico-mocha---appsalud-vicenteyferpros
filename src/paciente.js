@@ -5,7 +5,7 @@ class Paciente {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.fechaNacimiento = fechaNacimiento;
-        this.registroBascula = new Bascula([],[],[],0);
+        this.registroBascula = new Bascula([10,20],[160,170],[],0);
     }
 
     saludar() {
