@@ -6,3 +6,5 @@ const paciente = new Paciente("Maximo","Fernandez",new Date(1970,10,20,20,30,10,
 
 console.log(bascula.calcularIMC())
 console.log(paciente.obtenerFechaNacimiento())
+
+console.log(paciente.registroBascula.alturas)
