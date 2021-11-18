@@ -40,11 +40,14 @@ class Termometro {
     }
 
     obtenerTemperaturaMedia() {
-
-    }
-
-    obtenerTablaTemperaturasHTML() {
-
+        if(this.temperaturas.length <= 0){
+            return "No hay temperaturas";
+        }
+        let suma = 0;
+        for (let i = 0; i < this.temperaturas.length; i++) {
+            suma += this.temperaturas[i];
+        }
+        return suma / this.temperaturas.length;
     }
 
     static convertirCelsiusAFahrenheit(celsius) {
@@ -58,7 +61,7 @@ class Termometro {
         if (farenheit == undefined || farenheit == null) {
             return "Error"
         }
-        return ((temperaturas[0] - 32) * 5) / 9;
+        return ((farenheit - 32) * 5) / 9;
     }
 }
 

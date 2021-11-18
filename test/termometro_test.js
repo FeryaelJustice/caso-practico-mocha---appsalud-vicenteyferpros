@@ -41,17 +41,16 @@ describe('termometro Test', function () {
     });
     //obtenerTemperaturaMedia
     it('check obtenerTemperaturaMedia', function () {
-        let termometroObtenerTemperaturaMedia = new Termometro();
-        assert.equal(termometroObtenerTemperaturaMedia, "");
+        let fecha = new Date(1970, 10, 20, 20, 30, 10, 0)
+        let termometroObtenerTemperaturaMedia = new Termometro([20,40,60],[fecha,fecha,fecha], 3);
+        assert.equal(termometroObtenerTemperaturaMedia.obtenerTemperaturaMedia(), 40);
     });
     //convertirCelsiusAFarenheit
     it('check convertirCelsiusAFarenheit', function () {
-        let termometroConvertirCelsiusAFarenheit = new Termometro();
-        assert.equal(termometroConvertirCelsiusAFarenheit, "");
+        assert.equal(Termometro.convertirCelsiusAFahrenheit(20), 68);
     });
     //convertirFarenheitACelsius
     it('check convertirFarenheitACelsius', function () {
-        let termometroconvertirFarenheitACelsius = new Termometro();
-        assert.equal(termometroconvertirFarenheitACelsius, "");
+        assert.equal(Termometro.convertirFahrenheitACelsius(122), 50);
     });
 })
