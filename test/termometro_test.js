@@ -6,7 +6,8 @@ describe('termometro Test', function () {
     //Constructor
     it('check if termometro is created', function () {
         let termometro1 = new Termometro();
-        assert.typeOf(termometro1, "Object");
+        expect(termometro1).to.be.a('object');
+        //assert.typeOf(termometro1, "Object");
     });
     //obtenerNumeroAnotaciones
     it('check obtenerNumeroAnotaciones', function () {
@@ -51,6 +52,7 @@ describe('termometro Test', function () {
     });
     //convertirFarenheitACelsius
     it('check convertirFarenheitACelsius', function () {
-        assert.equal(Termometro.convertirFahrenheitACelsius(122), 50);
+        Termometro.convertirFahrenheitACelsius(122).should.equal(50);
+        //assert.equal(Termometro.convertirFahrenheitACelsius(122), 50);
     });
 })
