@@ -1,4 +1,5 @@
-const { assert, expect, should } = require('chai');
+const { assert, expect } = require('chai');
+
 const Bascula = require("../src/bascula");
 
 describe('bascula Test', function () {

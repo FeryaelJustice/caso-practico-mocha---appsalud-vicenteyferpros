@@ -1,27 +1,25 @@
 class Termometro {
 
-    constructor(temperaturas, fechas, anotaciones){
+    constructor(temperaturas, fechas, anotaciones) {
         this.temperaturas = temperaturas;
         this.fechas = fechas;
         this.anotaciones = anotaciones;
     }
 
-    obtenerNumeroAnotaciones(){
+    obtenerNumeroAnotaciones() {
         return this.anotaciones;
     }
 
-    anotarTemperatura(temperatura, fecha){
-        if (temperatura == undefined && temperatura == null) {
-            return "temperatura is not defined";
+    anotarTemperatura(temperatura, fecha) {
+        if ((temperatura == undefined && temperatura == null) || (fecha == undefined && fecha == null)) {
+            return "Temperatura or fecha are not defined";
         }
-        this.temperaturas.push(temperatura);
-        if (fecha !== undefined && fecha != null) {
-            this.fechas.push(fecha);
-        }
+        this.temperaturas.push(temperatura);;
         this.anotaciones += 1;
+        return "Success"
     }
 
-    obtenerTemperaturaMax(){
+    obtenerTemperaturaMax() {
         let temperaturaMax = this.temperaturas[0];
         for (let i = 0; i < this.temperaturas.length; i++) {
             if (this.temperaturas[i] > temperaturaMax) {
@@ -31,7 +29,7 @@ class Termometro {
         return temperaturaMax;
     }
 
-    obtenerTemperaturaMin(){
+    obtenerTemperaturaMin() {
         let temperaturaMin = this.temperaturas[0];
         for (let i = 0; i < this.temperaturas.length; i++) {
             if (this.temperaturas[i] < temperaturaMin) {
@@ -41,28 +39,26 @@ class Termometro {
         return temperaturaMin;
     }
 
-    obtenerTemperaturaMedia(){
-        
-    }
-
-    obtenerTablaTemperaturasHTML(){
+    obtenerTemperaturaMedia() {
 
     }
 
-    static convertirCelsiusAFahrenheit(){
-        let fahrenheit = ((temperaturas[0] * 9)/5)+32;
-        for (let i = 0; i < this.temperaturas.length; i++) {
-            
+    obtenerTablaTemperaturasHTML() {
+
+    }
+
+    static convertirCelsiusAFahrenheit(celsius) {
+        if (celsius == undefined || celsius == null) {
+            return "Error"
         }
-        return fahrenheit;
+        return ((celsius * 9) / 5) + 32;
     }
 
-    static convertirFahrenheitACelsius(){
-        let celsius = ((temperaturas[0] - 32)*5)/9;
-        for (let i = 0; i < this.temperaturas.length; i++) {
-
+    static convertirFahrenheitACelsius(farenheit) {
+        if (farenheit == undefined || farenheit == null) {
+            return "Error"
         }
-        return celsius;
+        return ((temperaturas[0] - 32) * 5) / 9;
     }
 }
 

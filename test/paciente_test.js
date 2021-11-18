@@ -1,4 +1,5 @@
-const { assert, expect, should } = require('chai');
+const { assert, expect } = require('chai');
+
 const Paciente = require("../src/paciente");
 
 describe('paciente Test', function () {
