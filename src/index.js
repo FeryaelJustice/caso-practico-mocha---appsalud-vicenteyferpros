@@ -15,3 +15,5 @@ const termometro = new Termometro([3, 4], [fechaActual, fechaActual], 2);
 console.log(bascula.obtenerNumeroAnotaciones());
 console.log(paciente.registroBascula.calcularIMC())
 console.log(termometro.obtenerTemperaturaMedia())
+
+termometro.createTable([["row 1, cell 1", "row 1, cell 2"], ["row 2, cell 1", "row 2, cell 2"]]);
