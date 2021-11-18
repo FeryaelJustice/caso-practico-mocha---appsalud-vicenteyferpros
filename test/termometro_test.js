@@ -17,8 +17,11 @@ describe('termometro Test', function () {
     });
     //anotarTemperatura
     it('check anotarTemperatura', function () {
-        let termometroAnotarTemperatura = new Termometro();
-        assert.equal(termometroAnotarTemperatura, "");
+        let fecha = new Date(1970, 10, 20, 20, 30, 10, 0)
+        let temperatura = 30;
+        let fechaActual = new Date();
+        let termometroAnotarTemperatura = new Termometro([1, 3], [fecha, fecha], 2);
+        assert.equal(termometroAnotarTemperatura.anotarTemperatura(temperatura,null), "Error");
     });
     //obtenerTemperaturaMax
     it('check obtenerTemperaturaMax', function () {
