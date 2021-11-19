@@ -51,6 +51,11 @@ class Paciente {
     obtenerEdad() {
         let fechaActual = new Date();
         let edad = fechaActual.getFullYear() - this.fechaNacimiento.getFullYear();
+        let mes = fechaActual.getMonth() - this.fechaNacimiento.getMonth();
+        let dia = fechaActual.getDate() - this.fechaNacimiento.getDate();
+        if (mes < 0 || (mes === 0 && dia < 0)) {
+            edad--;
+        }
         return edad;
     }
 

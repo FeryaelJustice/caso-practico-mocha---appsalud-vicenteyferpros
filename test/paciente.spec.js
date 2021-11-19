@@ -62,9 +62,9 @@ describe('paciente Test', function () {
 
     //obtenerEdad()
     it('obtenerEdad()', function () {
-        let fecha = new Date(2020, 10, 20, 20, 30, 10, 0);
+        let fecha = new Date(1971, 10, 20, 20, 30, 10, 0);
         let pacienteEdad = new Paciente("Maximo", 1, fecha);
-        let expected = 1;
+        let expected = 49;
         assert.equal(pacienteEdad.obtenerEdad(), expected, "mensaje");
     });
 
