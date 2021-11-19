@@ -46,6 +46,12 @@ describe('termometro Test', function () {
         let termometroObtenerTemperaturaMedia = new Termometro([20,40,60],[fecha,fecha,fecha], 3);
         assert.equal(termometroObtenerTemperaturaMedia.obtenerTemperaturaMedia(), 40);
     });
+    //obtenerTablaTemperaturasHTML
+    it('check obtenerTablaTemperaturasHTML', function () {
+        let fecha = new Date(1970, 10, 20, 20, 30, 10, 0)
+        let termometroObtenerTablaTemperaturasHTML = new Termometro([20,40,60],[fecha,fecha,fecha], 3);
+        assert.equal(termometroObtenerTablaTemperaturasHTML.obtenerTablaTemperaturasHTML(), "<table><tr><td>20</td><td>40</td><td>60</td></tr></table>");
+    });
     //convertirCelsiusAFarenheit
     it('check convertirCelsiusAFarenheit', function () {
         assert.equal(Termometro.convertirCelsiusAFahrenheit(20), 68);

@@ -50,7 +50,7 @@ class Termometro {
         return suma / this.temperaturas.length;
     }
 
-    obtenerTablaTemperaturasHTML(tableData,) {
+    obtenerTablaTemperaturasHTML(tableData) {
         var table = document.createElement('table');
         var tableBody = document.createElement('tbody');
 
