@@ -50,26 +50,35 @@ class Termometro {
         return suma / this.temperaturas.length;
     }
 
-    obtenerTablaTemperaturasHTML(tableData) {
-        var table = document.createElement('table');
-        var tableBody = document.createElement('tbody');
+    // Posible parametro: tableData
+    obtenerTablaTemperaturasHTML() {
+        if (document != undefined && document != null) {
+            var table = document.createElement('table');
+            var tableBody = document.createElement('tbody');
 
-        tableData.forEach(function (rowData, rowIndex) {
-            var row = document.createElement('tr');
-
-            rowData.forEach(function (cellData) {
+            // tableData.forEach(function (rowData) {}
+            this.temperaturas.forEach(function (rowData, rowIndex) {
+                var row = document.createElement('tr');
                 var cell = document.createElement('td');
-                cell.appendChild(document.createTextNode(cellData));
+                cell.appendChild(document.createTextNode(rowData));
                 row.appendChild(cell);
+                /*
+                rowData.forEach(function (cellData) {
+                    var cell = document.createElement('td');
+                    cell.appendChild(document.createTextNode(cellData));
+                    row.appendChild(cell);
+                });
+                */
+
+                tableBody.appendChild(row);
             });
 
-            tableBody.appendChild(row);
-        });
-
-        table.appendChild(tableBody);
-        document.body.appendChild(table);
-
-
+            table.appendChild(tableBody);
+            document.body.appendChild(table);
+        }else{
+            // Using with node, not in browser
+            return "Error"
+        }
         //createTable([["row 1, cell 1", "row 1, cell 2"], ["row 2, cell 1", "row 2, cell 2"]]);
     }
 

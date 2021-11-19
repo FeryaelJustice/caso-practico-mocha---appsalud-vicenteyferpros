@@ -98,7 +98,7 @@ console.log(bascula.obtenerNumeroAnotaciones());
 console.log(paciente.registroBascula.calcularIMC())
 console.log(termometro.obtenerTemperaturaMedia())
 
-termometro.createTable([["row 1, cell 1", "row 1, cell 2"], ["row 2, cell 1", "row 2, cell 2"]]);
+termometro.obtenerTablaTemperaturasHTML([["row 1, cell 1", "row 1, cell 2"], ["row 2, cell 1", "row 2, cell 2"]]);
 },{"./bascula":1,"./paciente":3,"./termometro":4}],3:[function(require,module,exports){
 const Bascula = require('./bascula');
 class Paciente {
@@ -107,7 +107,7 @@ class Paciente {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.fechaNacimiento = fechaNacimiento;
-        this.registroBascula = new Bascula([10, 20], [160, 170], [new Date(), new Date()], 0);
+        this.registroBascula = new Bascula([10, 20], [160, 170], [new Date(), new Date()], 2);
     }
 
     saludar() {
@@ -153,6 +153,11 @@ class Paciente {
     obtenerEdad() {
         let fechaActual = new Date();
         let edad = fechaActual.getFullYear() - this.fechaNacimiento.getFullYear();
+        let mes = fechaActual.getMonth() - this.fechaNacimiento.getMonth();
+        let dia = fechaActual.getDate() - this.fechaNacimiento.getDate();
+        if (mes < 0 || (mes === 0 && dia < 0)) {
+            edad--;
+        }
         return edad;
     }
 
@@ -228,26 +233,35 @@ class Termometro {
         return suma / this.temperaturas.length;
     }
 
-    obtenerTablaTemperaturasHTML(tableData,) {
-        var table = document.createElement('table');
-        var tableBody = document.createElement('tbody');
+    // Posible parametro: tableData
+    obtenerTablaTemperaturasHTML() {
+        if (document != undefined && document != null) {
+            var table = document.createElement('table');
+            var tableBody = document.createElement('tbody');
 
-        tableData.forEach(function (rowData, rowIndex) {
-            var row = document.createElement('tr');
-
-            rowData.forEach(function (cellData) {
+            // tableData.forEach(function (rowData) {}
+            this.temperaturas.forEach(function (rowData, rowIndex) {
+                var row = document.createElement('tr');
                 var cell = document.createElement('td');
-                cell.appendChild(document.createTextNode(cellData));
+                cell.appendChild(document.createTextNode(rowData));
                 row.appendChild(cell);
+                /*
+                rowData.forEach(function (cellData) {
+                    var cell = document.createElement('td');
+                    cell.appendChild(document.createTextNode(cellData));
+                    row.appendChild(cell);
+                });
+                */
+
+                tableBody.appendChild(row);
             });
 
-            tableBody.appendChild(row);
-        });
-
-        table.appendChild(tableBody);
-        document.body.appendChild(table);
-
-
+            table.appendChild(tableBody);
+            document.body.appendChild(table);
+        }else{
+            // Using with node, not in browser
+            return "Error"
+        }
         //createTable([["row 1, cell 1", "row 1, cell 2"], ["row 2, cell 1", "row 2, cell 2"]]);
     }
 
