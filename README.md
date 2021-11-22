@@ -63,11 +63,17 @@ Testeamos el constructor:
 
 ![Bascula constructor test](/doc/img/test/bascula_1.png)
 
+Testeamos si el método `calcularIMC()` devuelve lo que toca:
+
+![Bascula calcularIMC() test](/doc/img/test/bascula_2.png)
+
 ### Clase Paciente
 
 #### Primer test de Paciente
 
 Testeamos el constructor:
+
+![Paciente constructor test](/doc/img/test/paciente_1.png)
 
 ### Clase Termometro
 
