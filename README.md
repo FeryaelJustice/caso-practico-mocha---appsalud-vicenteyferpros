@@ -53,7 +53,7 @@ Ejecutamos el proyecto:
 
 ## TESTS
 
-* Ubicados en la carpeta /test/
+* Ubicados en la carpeta /test/ , recordando que esto se ejecuta con `npm test` de NodeJS desde la linea de comandos dentro del proyecto.
 
 ### Clase Bascula
 
@@ -79,9 +79,9 @@ Testeamos el constructor:
 
 #### Segundo test de Paciente
 
-Testeamos si el método `calcularIMC()` devuelve lo que toca:
+Testeamos si el método `obtenerEdad()` devuelve lo que toca:
 
-![Paciente calcularIMC() test](/doc/img/test/bascula_2.png)
+![Paciente obtenerEdad() test](/doc/img/test/paciente_2.png)
 
 ### Clase Termometro
 
@@ -95,6 +95,6 @@ El constructor de Termometro lo testeamos de manera sencilla empleando `expect.(
 
 #### Segundo test de Termometro
 
-Testeamos si el método `calcularIMC()` devuelve lo que toca:
+Testeamos si el método `convertirFarenheitACelsius(farenheit)` devuelve lo que toca:
 
-![Termometro calcularIMC() test](/doc/img/test/bascula_2.png)
+![Termometro convertirFarenheitACelsius(farenheit) test](/doc/img/test/termometro_2.png)
