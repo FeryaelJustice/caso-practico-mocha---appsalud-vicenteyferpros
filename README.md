@@ -12,7 +12,10 @@ Iniciamos un proyecto con npm init.
 Iniciamos un proyecto git con git init.
 
 ### Paso 3:
-Incluimos las librerías "mocha" y "chai" como devDependencies en el npm package.json para tener Mocha y Chai en nuestro proyecto.
+Incluimos las librerías "mocha" y "chai" como devDependencies en el npm package.json para tener Mocha y Chai en nuestro proyecto:
+`` npm i -D mocha ``
+`` npm i -D chai ``
+* -D es para instalar la dependencia como en desarrollo, no para producción.
 
 ### Paso 4:
 Ponemos en scripts del package.json:
