@@ -89,7 +89,7 @@ Testeamos si el método `obtenerEdad()` devuelve lo que toca:
 
 Testeamos el constructor:
 
-![Termometro constructor test](/doc/img/test/termometro_1.png)
+![Termometro constructor test](/doc/img/test/term_1.png)
 
 El constructor de Termometro lo testeamos de manera sencilla empleando `expect.(objeto)to.be.a.(tipo_objeto);`
 
@@ -97,4 +97,4 @@ El constructor de Termometro lo testeamos de manera sencilla empleando `expect.(
 
 Testeamos si el método `convertirFarenheitACelsius(farenheit)` devuelve lo que toca:
 
-![Termometro convertirFarenheitACelsius(farenheit) test](/doc/img/test/termometro_2.png)
+![Termometro convertirFarenheitACelsius(farenheit) test](/doc/img/test/term_2.png)
