@@ -60,6 +60,7 @@ Ejecutamos el proyecto:
 #### Primer test de Bascula
 
 Testeamos el constructor:
+
 ![Bascula constructor test](/doc/img/test/bascula_1.png)
 
 ### Clase Paciente
@@ -73,6 +74,7 @@ Testeamos el constructor:
 #### Primer test de Termometro
 
 Testeamos el constructor:
+
 ![Termometro constructor test](/doc/img/test/termometro_1.PNG)
 
 El constructor de Termometro lo testeamos de manera sencilla empleando `expect.(objeto)to.be.a.(tipo_objeto);`
