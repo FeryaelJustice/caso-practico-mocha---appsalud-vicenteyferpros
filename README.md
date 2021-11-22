@@ -73,3 +73,6 @@ Testeamos el constructor:
 #### Primer test de Termometro
 
 Testeamos el constructor:
+![Termometro constructor test](/doc/img/test/termometro_1.png)
+
+El constructor de Termometro lo testeamos de manera sencilla empleando `expect.(objeto)to.be.a.(tipo_objeto);`
