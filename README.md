@@ -16,6 +16,7 @@ Incluimos las librerías "mocha" y "chai" como devDependencies en el npm package
 `` npm i -D mocha ``
 `` npm i -D chai ``
 * -D es para instalar la dependencia como en desarrollo, no para producción.
+![Package.json completo](/doc/img/step4.png)
 
 ### Paso 4:
 Ponemos en scripts del package.json:
