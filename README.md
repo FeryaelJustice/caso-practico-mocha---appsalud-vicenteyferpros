@@ -63,6 +63,8 @@ Testeamos el constructor:
 
 ![Bascula constructor test](/doc/img/test/bascula_1.png)
 
+#### Segundo test de Bascula
+
 Testeamos si el método `calcularIMC()` devuelve lo que toca:
 
 ![Bascula calcularIMC() test](/doc/img/test/bascula_2.png)
@@ -75,6 +77,12 @@ Testeamos el constructor:
 
 ![Paciente constructor test](/doc/img/test/paciente_1.png)
 
+#### Segundo test de Paciente
+
+Testeamos si el método `calcularIMC()` devuelve lo que toca:
+
+![Paciente calcularIMC() test](/doc/img/test/bascula_2.png)
+
 ### Clase Termometro
 
 #### Primer test de Termometro
@@ -84,3 +92,9 @@ Testeamos el constructor:
 ![Termometro constructor test](/doc/img/test/termometro_1.PNG)
 
 El constructor de Termometro lo testeamos de manera sencilla empleando `expect.(objeto)to.be.a.(tipo_objeto);`
+
+#### Segundo test de Termometro
+
+Testeamos si el método `calcularIMC()` devuelve lo que toca:
+
+![Termometro calcularIMC() test](/doc/img/test/bascula_2.png)
